@@ -81,8 +81,8 @@ alias gi='vim .gitignore'
 alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
-alias gco='git co'
-alias gcp='git cp'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
 alias ga='git add -A'
 alias gap='git add -p'
 alias guns='git unstage'
@@ -120,6 +120,8 @@ alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
 alias grsh='git reset --hard'
+alias gc='git commit'
+alias gca='git commit --amend'
 alias gcln='git clean'
 alias gclndf='git clean -df'
 alias gclndfx='git clean -dfx'
@@ -211,3 +213,14 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
+# Kubernetes
+alias kc='kubectl'
+alias kcuc='kubectl config use-context'
+alias kcgc='kubectl config get-contexts'
+alias kcgp='kubectl get pods'
+alias kcpf='kubectl port-forward'
+
+# npm
+alias npms='npm start'
+alias npmt='npm test'

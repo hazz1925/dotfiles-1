@@ -119,3 +119,21 @@ set nomodeline
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+set clipboard=unnamed
+
+nmap =j :%!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=4)"<CR>
+
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+let test#strategy = "vimux"
+let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!' ]
+:map ,cll iconsole.log();<Esc>==f(a
+:imap ,cll console.log();<Esc>==f(a
+
+" fold json file with open - zo, close - zc, toggle - za
+set foldmethod=syntax

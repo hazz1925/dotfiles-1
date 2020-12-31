@@ -223,4 +223,8 @@ alias kcpf='kubectl port-forward'
 
 # npm
 alias npms='npm start'
+alias npmsd='npm run start:dev'
 alias npmt='npm test'
+alias npmb='npm run build'
+alias npmpf='npm run port-forward'
+alias npmtc='npm run test:cov'

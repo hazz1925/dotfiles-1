@@ -131,9 +131,12 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = "vimux"
+let test#javascript#mocha#file_pattern = '\.spec\.ts$'
+" let test#javascript#mocha#executable = 'mocha test'
 let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!' ]
 :map ,cll iconsole.log();<Esc>==f(a
 :imap ,cll console.log();<Esc>==f(a
 
 " fold json file with open - zo, close - zc, toggle - za
 set foldmethod=syntax
+" colorscheme delek

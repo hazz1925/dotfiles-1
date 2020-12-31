@@ -130,3 +130,8 @@
 [user]
 	name = Hazeem Salim
 	email = hazeem.1925@gmail.com
+[diff "sopsdiffer"]
+	textconv = sops -d
+[pull]
+	rebase = true
+	ff = only

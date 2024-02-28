@@ -1,3 +1,23 @@
 source $HOME/.zprezto/runcoms/zshrc
 
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+
+# Load NVM
+# https://github.com/nvm-sh/nvm/issues/2362
+setopt no_aliases
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+setopt aliases
+
+export NPM_AUTH_TOKEN=7c4597ef-c4e9-4841-8de3-f16d07516b53
+
+export KUBECONFIG=~/.kube/config
+
+# Load kustomize and plugins
+export PATH=$PATH:$HOME/.config/kustomize/plugin/setel.my/v1/sedtransformer:$HOME/.kustomize
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+alias skip-test='git stash apply ff961270783eddb0247c9abd5cd8fe0741b87c0b'
+alias local-test='git stash apply c3f4ddb532881f9b6a0342e3b8ba4b5a880827bc'
+[[ -s /Users/hazeemsalim/.rsvm/rsvm.sh ]] && . /Users/hazeemsalim/.rsvm/rsvm.sh # This loads RSVM

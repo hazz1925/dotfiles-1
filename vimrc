@@ -140,3 +140,9 @@ let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!' ]
 " fold json file with open - zo, close - zc, toggle - za
 set foldmethod=syntax
 " colorscheme delek
+
+" Use deoplete.
+" let g:deoplete#enable_at_startup = 1
+
+" Use Snipmate version 1
+let g:snipMate = { 'snippet_version' : 1 }

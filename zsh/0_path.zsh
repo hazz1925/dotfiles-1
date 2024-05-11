@@ -14,6 +14,7 @@ pathAppend "$HOME/.yadr/bin"
 pathAppend "$HOME/.yadr/bin/yadr"
 pathAppend "$HOME/.local/bin"
 
+PATH="/opt/homebrew/sbin:$PATH"
 PATH="/opt/homebrew/bin:$PATH"
 
 # nvm path

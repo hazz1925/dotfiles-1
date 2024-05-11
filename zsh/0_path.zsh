@@ -12,6 +12,7 @@ PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS;
 
 pathAppend "$HOME/.yadr/bin"
 pathAppend "$HOME/.yadr/bin/yadr"
+pathAppend "$HOME/.local/bin"
 
 PATH="/opt/homebrew/bin:$PATH"
 

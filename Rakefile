@@ -20,10 +20,10 @@ task :install => [:submodule_init, :submodules] do
   install_files(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
   install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
-  if want_to_install?('vim configuration (highly recommended)')
-    install_files(Dir.glob('{vim,vimrc}'))
-    Rake::Task["install_vundle"].execute
-  end
+  # if want_to_install?('vim configuration (highly recommended)')
+  #   install_files(Dir.glob('{vim,vimrc}'))
+  #   Rake::Task["install_vundle"].execute
+  # end
 
   Rake::Task["install_prezto"].execute
 
@@ -172,8 +172,9 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi nvm rust ripgrep}
+  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi nvm rust ripgrep neovim karabiner-elements}
   run %{LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)}
+  run %{nvm install --lts}
   puts
   puts
 end
